@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import 'bootstrap';
+import './js/forum';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/style.css';
 import mainContent from './html/index.html';
@@ -18,7 +19,7 @@ $('body').on('click', 'a', (event) => {
   }
 
   // eslint-disable-next-line global-require, import/no-dynamic-require
-  const content = require(`./html/${$this.attr('href')}.html`);
+  const content = require(`./html/${href}.html`);
 
   if (target) {
     $(target).html(content);
